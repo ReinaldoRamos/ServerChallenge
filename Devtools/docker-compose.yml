@@ -39,7 +39,7 @@ services:
     build:
       context: .
       dockerfile: docker/nginx.dockerfile
-    container_name: nginx_policy
+    container_name: nginx_challenge
     ports:
       - 80:80
     networks:
