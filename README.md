@@ -20,7 +20,7 @@ docker-compose up
 3) This will create a local server in https://0.0.0.0:8080 using nginx in a container. 
 
 4) You can make some tests to see if everything is fine running the teste_challenge.sh in the same repository.
-- grant permissions for the file:
+- Grant permissions for the file:
 ```bash
 cmod +x teste_challenge.sh
 ```
