@@ -19,7 +19,9 @@ docker-compose up
 
 3) This will create a local server in https://0.0.0.0:8080 using nginx in a container. 
 
-4) You can make some tests to see if everything is fine running the teste_challenge.sh in the same repository.
+4) You can access the API documentation in https://0.0.0.0:8080/docs after the build is complete.
+
+5) You can make some tests to see if everything is fine running the teste_challenge.sh in the same repository.
 - Grant permissions for the file:
 ```bash
 cmod +x teste_challenge.sh
