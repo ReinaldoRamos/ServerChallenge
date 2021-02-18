@@ -14,8 +14,8 @@ For this project we will run the environment using Docker, in order to prevent d
 ```bash
 docker-compose up
 ```
-   PS.: * On Windows you may need to index system variables to run this.
-        * Make sure there's no other service using this port so there are no conflicts.
+ * On Windows you may need to index system variables to run this.
+ * Make sure there's no other service using this port so there are no conflicts.
 
 3) This will create a local server in https://0.0.0.0:8080 using nginx in a container. 
 
