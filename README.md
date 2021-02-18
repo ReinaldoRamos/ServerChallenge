@@ -4,7 +4,7 @@
 
 This project contains an API made with python 3 & a simple html/javascript frontpage for consulting alerts in servers. This still under development.
 
-## Getting started
+## Instructions
 
 For this project we will run the environment using Docker, in order to prevent differences between local configurations.
 
