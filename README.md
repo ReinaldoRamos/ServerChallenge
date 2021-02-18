@@ -24,7 +24,7 @@ docker-compose up
 ```bash
 cmod +x teste_challenge.sh
 ```
-Then run this in your terminal:
+- Then run this in your terminal:
 ```bash
 ./teste_challenge.sh
 ```
