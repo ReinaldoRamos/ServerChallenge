@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+#connect server 
+export TILLER_NAMESPACE=tiller
+tiller -listen=localhost:44134 -storage=secret -logtostderr
+
+
+# connect client 
+export HELM_HOST=:44134
+

@@ -1,0 +1,52 @@
+version: "3"
+services:
+  db:
+    image: mariadb
+    container_name: devtest
+    env_file:
+     - app.env
+    networks:
+      - mysql-compose-network
+    
+  app:
+    build:
+      dockerfile: docker/app.dockerfile
+      context: .
+    image: teste/devtools
+    container_name: challenge
+    env_file:
+     - app.env
+    networks:
+      - mysql-compose-network
+    depends_on:
+      - db
+      - migrate
+
+  migrate:
+    build:
+      dockerfile: docker/migrate.dockerfile
+      context: .
+    image: teste/migrate
+    container_name: migrate
+    env_file:
+     - app.env
+    networks:
+      - mysql-compose-network
+    depends_on:
+      - db
+    
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx.dockerfile
+    container_name: nginx_policy
+    ports:
+      - 80:80
+    networks:
+      - mysql-compose-network
+    depends_on:
+      - app
+
+networks: 
+  mysql-compose-network:
+    driver: bridge
